@@ -1,0 +1,83 @@
+<!doctype html>
+<html ng-app="RailWreck">
+<head>	
+    
+    <link href= {{ url_for('static',filename='css/bootstrap.min.css') }} rel="stylesheet" type="text/css">
+    <link href= {{ url_for('static',filename='css/sb-admin.css') }} rel="stylesheet" type="text/css">
+    <link href= {{ url_for('static',filename="font-awesome/css/font-awesome.min.css" ) }} rel="stylesheet" type="text/css">   
+
+</head>
+<body>
+	
+	<div id="wrapper" ng-controller="DataController">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href={{ url_for('static',filename='index.htm') }}>Train Wreck Data Analysis</a>
+            </div>
+            
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="#/Home"><i class="fa fa-fw fa-dashboard"></i> Home</a>
+                    </li>
+                    <li>
+                        <a href="#/State"><i class="fa fa-fw fa-bar-chart-o"></i>State</a>
+                    </li>
+                    <li>
+                        <a href="#/City"><i class="fa fa-fw fa-bar-chart-o"></i>City</a>
+                    </li>
+					<li>
+                        <a href="#/Railroad"><i class="fa fa-fw fa-table"></i> Railroad</a>
+                    </li>
+                    <li>
+                        <a href="#/Hour"><i class="fa fa-fw fa-table"></i> Hour</a>
+                    </li>
+
+                    <li>
+                        <a href="#/Year"><i class="fa fa-fw fa-table"></i> Year</a>
+                    </li>
+
+                    <li>
+                        <a href="#/Month"><i class="fa fa-fw fa-table"></i> Month</a>
+                    </li>
+
+                    <li>
+                        <a href="#/Date"><i class="fa fa-fw fa-table"></i> Date</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <!-- /.row -->
+                <div ng-view>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+	<!-- /#page-wrapper -->
+</div>
+
+<script type="text/javascript" src={{ url_for('static',filename="js/angular.min.js" ) }}></script>
+<script type="text/javascript" src={{ url_for('static',filename="js/jQuery.js" ) }}></script>
+<script type="text/javascript" src={{ url_for('static',filename="js/app.js" ) }}></script>
+<!-- Bootstrap Core JavaScript -->
+<script src={{ url_for('static',filename="js/bootstrap.min.js" ) }}></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.min.js"></script>
+
+	
+</body>
+</html>
